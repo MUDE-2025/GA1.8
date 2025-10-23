@@ -1,4 +1,4 @@
-# Group assignment 1.8: 
+# Group assignment 1.8: Fit (and test) me baby, one more time
 
 *Due: `Friday, 24th October, 2025`.*
 
