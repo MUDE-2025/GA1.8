@@ -1,9 +1,5 @@
 # Group Assignment 1.8: Fit (and test) me baby, one more time
 
-*[CEGM1000 MUDE](http://mude.citg.tudelft.nl/)*
-
-*Written by: `Sandra Verhagen, Lina Hagenah`*
-
 *Due: Friday, October 24, 2025.*
 
 
@@ -16,7 +12,7 @@ _To include in your answer:_
 
 % solution_start
 
-**Initial Values for Gauss-Newton Iteration**
+**a. Initial Values for Gauss-Newton Iteration**
 
 - $d_0 = 10.099$ m (approximate initial offset)
 - $v = 0.35$ m (estimated total uplift over the period)
@@ -35,7 +31,8 @@ _To include in your answer:_
 
 ---
 
-**Reflection on Initial Values and Convergence**
+
+**b. Reflection on Initial Values and Convergence**
 
 The choice of initial values significantly influenced the convergence behavior. When initial values were close to the true values, the algorithm converged quickly and the parameter estimates were stable. If initial values were chosen further from the true solution, more iterations were needed, and in some cases, the algorithm could fail to converge or converge to incorrect values. This highlights the importance of informed initial guesses in non-linear least squares problems.
 
@@ -43,9 +40,14 @@ The choice of initial values significantly influenced the convergence behavior. 
 
 % solution_start
 
-- 0.5 points Describing initial parameter
+1a.
+- 0.5 points Describing initial parameters
 - 0.5 points For showing iterations needed (with visual)
-- 1.0 points Refelcting on the significance of the initial value  
+
+1b.
+- 1.0 points Reflecting on the significance of the initial value 
+
+(in all cases half of the points can be subtracted if only partially correct) 
 
 % solution_end
 
@@ -59,30 +61,30 @@ _To include in your answer:_
 
 % solution_start
 
-**Analysis of the Fitted Model and Residuals**
+**a) Analysis of the Fitted Model and Residuals**
 
-The standard deviations of the estimated parameters are small, indicating precise estimates:
-- $d_0$: 0.0054 m
-- $v$: 0.0032 m/day
-- $a$: 6.31 days
-- $A$: 0.002 m
-
-**Distribution of Residuals:**  
 The mean and standard deviations are as expected given the assumed observation precision of 15 mm. However, the residual plot shows a discontinuity around July 2024, which leads to deviations in the upper tail of the residual distribution. As a result, some residuals are larger than expected, and the upper quantiles (outliers) do not follow the expected normal distribution. This suggests that the model does not fully capture all systematic effects in the data.
 
-**Overall Model Test:**  
+**b) Overall Model Test:**  
 The test statistic is 443.39, while the critical threshold is 406.30. Since the test statistic exceeds the threshold, we reject the null hypothesis $H_0$. This means the fitted model does not fully explain the data.
 
-**Critical Value for $H_0$ Acceptance:**  
+**c) Critical Value for $H_0$ Acceptance:**  
 To accept the null hypothesis $H_0$, the critical value would need to be increased above the observed test statistic (i.e., above 443.39). However, changing the critical value should only be done with a justified reason, such as a different significance level.
 
 % solution_end
 
 % solution_start
 
+2a.
 - 0.5 pt — Correctly assessing and explaining whether the distribution of the residuals is as expected, with clear reasoning
+
+2b.
 - 1.0 pt — Correctly stating and interpreting the outcome of the overall model test (including correct use of test statistic and threshold, and what it means for $H_0$)
+
+2c. 
 - 0.5 pt — Correctly explaining how the critical value would need to change in order to accept $H_0$, and what this implies
+
+(in all cases half of the points can be subtracted if only partially correct) 
 
 % solution_end
 
@@ -92,20 +94,26 @@ To accept the null hypothesis $H_0$, the critical value would need to be increas
 
 % solution_start
 
-**GLRT and Estimation of Shift Day**
+**a) GLRT and Estimation of Shift Day**
 
 The Generalized Likelihood Ratio Test (GLRT) was applied to the data to detect the most likely day of the shift. For each possible day $k$, the model was fitted and the test statistic was computed. The day with the maximum test statistic corresponds to the most likely shift.
 
 - The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 105.63.
 
-**overall Model Test:**  
+**b) overall Model Test:**  
 The test statistic is 337.76, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
 
 % solution_end
 
 % solution_start
+
+3a
 - 1.0 pt — Correctly applying the GLRT, identifying and reporting the estimated day of shift ($\mathbf{k}_{\text{hat}}$) and the corresponding test statistic.
+
+3b
 - 1.0 pt — Correctly stating and interpreting the outcome of the overall model test (including correct use of test statistic and threshold, and what it means for $H_0$).
+
+(in all cases half of the points can be subtracted if only partially correct) 
 
 % solution_end
 
@@ -118,7 +126,7 @@ _To include in your answer:_
 
 % solution_start
 
-**Estimated Parameters and their Quality and Convergence for $H_0$**
+**a) Estimated Parameters and their Quality and Convergence for $H_0$ and $H_a$**
 
 The Gauss-Newton iteration was applied using these initial values. The algorithm converged after **for example 7 iterations**. The final estimated parameters are:
 - $d_0 = 10.009$ m
@@ -131,7 +139,6 @@ The standard deviation for $v$ is 0.0032 m/day
 The standard deviation for scaling parameter $a$ is 6.3129 days
 The standard deviation for amplitude ($A$) is 0.002 m
 
-**Estimated Parameters and Convergence for $H_a$**
 
 Using the alternative model with the shift at day 199, the Gauss-Newton iteration converged after 6 iterations. The estimated parameters are:
 - $d_0 = 10.002$ m
@@ -151,12 +158,12 @@ These results indicate that the model with a shift at day 199 provides a better 
 **Comparison**
 
 - Less residuals are outside the confidence interval.
-- - The residuals for the alternative model have a smaller standard deviation and their distribution more closely matches a normal distribution, as confirmed by the Q-Q plot and histogram.
+- The residuals for the alternative model have a smaller standard deviation and their distribution more closely matches a normal distribution, as confirmed by the Q-Q plot and histogram.
 - The value of the estimated $a$ changes from around 130 to 93, which shows how the mismodelling can affect the parameter estimation. This can be very important in case the model is used for predicting the displacements for the future!
 - The introduction of the shift parameter $s$ captures the abrupt change in displacement, which was not explained by the initial model.
 
 
-**Importance of statistical tests**
+**c) Importance of statistical tests**
 - Visual inspection alone can be misleading because the human eye may not detect subtle but statistically significant deviations, outliers, or patterns in the residuals.
 - A model might appear to fit the data well when plotted, but statistical tests provide objective criteria to assess model adequacy, parameter reliability, and the presence of systematic errors.
 - Statistical tests quantify the likelihood that observed deviations are due to random noise rather than model misspecification.
@@ -165,14 +172,21 @@ These results indicate that the model with a shift at day 199 provides a better 
 % solution_end
 
 % solution_start
+
+4a
 - 0.5 pt - Showing estimated parameters from $H_0$ and $H_a$ and their quality. 
 - 0.5 pt - Discussing differences in estimated parameters   
-- 1.0 pt — Correctly comparing the final selected model and the initial model in terms of overall model fit and residual statistics (e.g., fewer residuals outside the confidence interval, smaller standard deviation, better fit to normal distribution).
-- 1.0 pt — Clearly explaining why it is essential to rely on statistical tests rather than only visual inspection, including the impact on parameter estimation and the importance for future predictions.
 
+4b.
+- 1.0 pt — Correctly comparing the final selected model and the initial model in terms of overall model fit and residual statistics (e.g., fewer residuals outside the confidence interval, smaller standard deviation, better fit to normal distribution).
+
+4c
+- 1.0 pt — Clearly explaining why it is essential to rely on statistical tests rather than only visual inspection, including the impact on parameter estimation and the importance for future predictions. (not all bullet points in solution need to be mentioned, but at least what is mentioned here in the rubric)
+
+(in all cases half of the points can be subtracted if only partially correct) 
 
 
 % solution_end
 
 
-> By Sandra Verhagen, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
+> By Sandra Verhagen and Lina Hagenah, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
