@@ -2,7 +2,7 @@
 
 *Due: `Friday, 24th October, 2025`.*
 
-You can access this assignment with the following link: `classroom.github.com/a/<xxxxxxx>`.
+You can access this assignment with the following link: https://classroom.github.com/a/lpwyEP7x.
 
 This week you are continuing the task of monitoring the uplift caused by water injection at a specific site, building upon the initial data collection and analysis performed in the previous assignment.
 
