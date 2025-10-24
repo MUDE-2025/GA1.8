@@ -96,7 +96,7 @@ To accept the null hypothesis $H_0$, the critical value would need to be increas
 
 The Generalized Likelihood Ratio Test (GLRT) was applied to the data to detect the most likely day of the shift. For each possible day $k$, the model was fitted and the test statistic was computed. The day with the maximum test statistic corresponds to the most likely shift.
 
-- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 105.63.
+- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 102.70.
 
 **b) overall Model Test:**  
 The test statistic is 337.76, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
