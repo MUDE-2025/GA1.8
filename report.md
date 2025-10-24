@@ -1,6 +1,4 @@
-# Group Assignment 1.8: Fit (and test) me baby, one more time
-
-*Due: Friday, October 24, 2025.*
+# Report
 
 
 ## Part 1
