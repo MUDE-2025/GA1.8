@@ -96,7 +96,7 @@ To accept the null hypothesis $H_0$, the critical value would need to be increas
 
 The Generalized Likelihood Ratio Test (GLRT) was applied to the data to detect the most likely day of the shift. For each possible day $k$, the model was fitted and the test statistic was computed. The day with the maximum test statistic corresponds to the most likely shift.
 
-- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 102.88.
+- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 102.88. (Note: In an earlier version of this assignment the test statistic was 102.70)
 
 **b) overall Model Test:**  
 The test statistic is 337.58, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
@@ -152,6 +152,42 @@ The standard deviation for $A$ is 0.0017 m
 The standard deviation for $s$ is 0.0036 m
 
 These results indicate that the model with a shift at day 199 provides a better fit to the data, as supported by the GLRT.
+
+Old version had slightly different numbers. Depending on jacobian based on code implementation or text notation, the following numbers were found:
+
+Final GNSS parameter estimates:
+d_0 = 10.002 m
+v   = 0.304 m/day
+a   = 93.383 days
+A   = 0.029 m
+shift = 0.037 m
+Change point at day k = 199
+
+Final standard deviations of estimated parameters (GNSS with shift):
+d_0 = 0.0051 m
+v   = 0.0059 m/day
+a   = 4.5682 days
+A   = 0.0017 m
+shift = 0.0036 m
+
+The estimated time of the shift is day 199, with test statistic 102.70.
+Test statistic is 337.76, threshold is 405.24.
+
+Final GNSS parameter estimates:
+d_0 = 10.002 m
+v   = 0.304 m/day
+a   = 93.371 days
+A   = 0.029 m
+shift = 0.037 m
+Change point at day k = 199
+
+Final standard deviations of estimated parameters (GNSS with shift):
+d_0 = 0.0052 m
+v   = 0.0059 m/day
+a   = 4.5886 days
+A   = 0.0017 m
+shift = 0.0036 m
+
 
 **Comparison**
 
