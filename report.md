@@ -64,10 +64,10 @@ _To include in your answer:_
 The mean and standard deviations are as expected given the assumed observation precision of 15 mm. However, the residual plot shows a discontinuity around July 2024, which leads to deviations in the upper tail of the residual distribution. As a result, some residuals are larger than expected, and the upper quantiles (outliers) do not follow the expected normal distribution. This suggests that the model does not fully capture all systematic effects in the data.
 
 **b) Overall Model Test:**  
-The test statistic is 443.39, while the critical threshold is 406.30. Since the test statistic exceeds the threshold, we reject the null hypothesis $H_0$. This means the fitted model does not fully explain the data.
+The test statistic is 440.46, while the critical threshold is 406.30. Since the test statistic exceeds the threshold, we reject the null hypothesis $H_0$. This means the fitted model does not fully explain the data.
 
 **c) Critical Value for $H_0$ Acceptance:**  
-To accept the null hypothesis $H_0$, the critical value would need to be increased above the observed test statistic (i.e., above 443.39). However, changing the critical value should only be done with a justified reason, such as a different significance level.
+To accept the null hypothesis $H_0$, the critical value would need to be increased above the observed test statistic (i.e., above 440.46). However, changing the critical value should only be done with a justified reason, such as a different significance level.
 
 % solution_end
 
@@ -96,10 +96,10 @@ To accept the null hypothesis $H_0$, the critical value would need to be increas
 
 The Generalized Likelihood Ratio Test (GLRT) was applied to the data to detect the most likely day of the shift. For each possible day $k$, the model was fitted and the test statistic was computed. The day with the maximum test statistic corresponds to the most likely shift.
 
-- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 102.70.
+- The estimated day of the shift is $\mathbf{k}_{\text{hat}} = 199$, where the test statistic reaches its maximum value of 102.88.
 
 **b) overall Model Test:**  
-The test statistic is 337.76, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
+The test statistic is 337.58, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
 
 % solution_end
 
@@ -128,26 +128,26 @@ _To include in your answer:_
 
 The Gauss-Newton iteration was applied using these initial values. The algorithm converged after **for example 7 iterations**. The final estimated parameters are:
 - $d_0 = 10.009$ m
-- $v = 0.356$ m
-- $a = 129.506$ days
+- $v = 0.355$ m
+- $a = 127.644$ days
 - $A = 0.028$ m
 
 The standard deviation for offset ($d_0$) is 0.0054 m
-The standard deviation for $v$ is 0.0032 m/day
-The standard deviation for scaling parameter $a$ is 6.3129 days
+The standard deviation for $v$ is 0.0033 m/day
+The standard deviation for scaling parameter $a$ is 6.1123 days
 The standard deviation for amplitude ($A$) is 0.002 m
 
 
 Using the alternative model with the shift at day 199, the Gauss-Newton iteration converged after 6 iterations. The estimated parameters are:
-- $d_0 = 10.002$ m
-- $v = 0.304$ m
-- $a = 93.371$ days
-- $A = 0.029$ m
-- $s = 0.037$ m
+- $d_0 = 10.005$ m
+- $v = 0.311$ m
+- $a = 99.242$ days
+- $A = 0.030$ m
+- $s = 0.030 $ m
 
 The standard deviation for $d_0$ is 0.0052 m
-The standard deviation for $v$$ is 0.0059 m/day
-The standard deviation for $a$ is 4.5886 days
+The standard deviation for $v$ is 0.0061 m/day
+The standard deviation for $a$ is 4.9080 days
 The standard deviation for $A$ is 0.0017 m
 The standard deviation for $s$ is 0.0036 m
 
@@ -157,7 +157,7 @@ These results indicate that the model with a shift at day 199 provides a better 
 
 - Less residuals are outside the confidence interval.
 - The residuals for the alternative model have a smaller standard deviation and their distribution more closely matches a normal distribution, as confirmed by the Q-Q plot and histogram.
-- The value of the estimated $a$ changes from around 130 to 93, which shows how the mismodelling can affect the parameter estimation. This can be very important in case the model is used for predicting the displacements for the future!
+- The value of the estimated $a$ changes from around 130 to 99, which shows how the mismodelling can affect the parameter estimation. This can be very important in case the model is used for predicting the displacements for the future!
 - The introduction of the shift parameter $s$ captures the abrupt change in displacement, which was not explained by the initial model.
 
 
