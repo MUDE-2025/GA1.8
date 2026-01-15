@@ -8,7 +8,6 @@ _To include in your answer:_
 - A plot of your estimates for each parameter versus the iteration number (horizontal axis: iteration number, vertical axis: parameter estimate)
 
 
-% solution_start
 
 **a. Initial Values for Gauss-Newton Iteration**
 
@@ -34,9 +33,7 @@ _To include in your answer:_
 
 The choice of initial values significantly influenced the convergence behavior. When initial values were close to the true values, the algorithm converged quickly and the parameter estimates were stable. If initial values were chosen further from the true solution, more iterations were needed, and in some cases, the algorithm could fail to converge or converge to incorrect values. This highlights the importance of informed initial guesses in non-linear least squares problems.
 
-% solution_end
 
-% solution_start
 
 1a.
 - 0.5 points Describing initial parameters
@@ -47,7 +44,6 @@ The choice of initial values significantly influenced the convergence behavior. 
 
 (in all cases half of the points can be subtracted if only partially correct) 
 
-% solution_end
 
 ## Part 2
 
@@ -57,7 +53,6 @@ _To include in your answer:_
 - The outcome of the overall model test  
 - How would the critical value need to change in order to accept the null hypothesis $H_0$?
 
-% solution_start
 
 **a) Analysis of the Fitted Model and Residuals**
 
@@ -69,9 +64,7 @@ The test statistic is 440.46, while the critical threshold is 406.30. Since the 
 **c) Critical Value for $H_0$ Acceptance:**  
 To accept the null hypothesis $H_0$, the critical value would need to be increased above the observed test statistic (i.e., above 440.46). However, changing the critical value should only be done with a justified reason, such as a different significance level.
 
-% solution_end
 
-% solution_start
 
 2a.
 - 0.5 pt — Correctly assessing and explaining whether the distribution of the residuals is as expected, with clear reasoning
@@ -84,13 +77,11 @@ To accept the null hypothesis $H_0$, the critical value would need to be increas
 
 (in all cases half of the points can be subtracted if only partially correct) 
 
-% solution_end
 
 
 ## Part 3
 **4. For the alternative model using the Generalized Likelihood Ratio Test (GLRT), estimate the most likely day the shift occurred. Identify the day $\mathbf{k}_{\text{hat}}$ corresponding to the maximum test statistic and report this estimated day of shift. Is the alternative hypothesis accepted or rejected?(2 pt)**
 
-% solution_start
 
 **a) GLRT and Estimation of Shift Day**
 
@@ -101,9 +92,7 @@ The Generalized Likelihood Ratio Test (GLRT) was applied to the data to detect t
 **b) overall Model Test:**  
 The test statistic is 337.58, while the critical threshold is 405.24. Since the test statistic is below the threshold, we accept the null hypothesis $H_0$ for the alternative model. This means the alternative model provides a statistically adequate fit to the data.
 
-% solution_end
 
-% solution_start
 
 3a
 - 1.0 pt — Correctly applying the GLRT, identifying and reporting the estimated day of shift ($\mathbf{k}_{\text{hat}}$) and the corresponding test statistic.
@@ -113,7 +102,6 @@ The test statistic is 337.58, while the critical threshold is 405.24. Since the 
 
 (in all cases half of the points can be subtracted if only partially correct) 
 
-% solution_end
 
 
 ## Part 4
@@ -122,7 +110,6 @@ The test statistic is 337.58, while the critical threshold is 405.24. Since the 
 _To include in your answer:_ 
 - Your estimated parameters from $H_0$ and $H_a$ and their quality 
 
-% solution_start
 
 **a) Estimated Parameters and their Quality and Convergence for $H_0$ and $H_a$**
 
@@ -203,9 +190,7 @@ shift = 0.0036 m
 - Statistical tests quantify the likelihood that observed deviations are due to random noise rather than model misspecification.
 - Ignoring statistical tests risks accepting a model that does not truly capture the underlying process, which can lead to biased or imprecise parameter estimates.
 - This is especially important for parameters like $a$, where mismodelling can result in significant errors in future predictions.
-% solution_end
 
-% solution_start
 
 4a
 - 0.5 pt - Showing estimated parameters from $H_0$ and $H_a$ and their quality. 
@@ -220,7 +205,6 @@ shift = 0.0036 m
 (in all cases half of the points can be subtracted if only partially correct) 
 
 
-% solution_end
 
 
 > By Sandra Verhagen and Lina Hagenah, Delft University of Technology. CC BY 4.0, more info [on the Credits page of Workbook](https://mude.citg.tudelft.nl/workbook-2025/credits.html).
